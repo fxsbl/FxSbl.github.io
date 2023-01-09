@@ -1,0 +1,1171 @@
+
+/* ROOR VARIABLES */
+
+.root {
+    --color-white: #fff;
+    --color-light: #f4f4f4;
+    --color-dark: #525252;
+    --color-black: #141415;
+    --color-primary: #ef3b05;
+    --color-primary-light: rgba(240, 68, 15, 0.12);
+    --color-success: #29f5a6;
+    --color-warning: #ffce31;
+    --color-mine: skyblue;
+
+    --transition: all 30ms ease;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: #8fb3c1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #009EDB;
+}
+
+html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-white);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-dark);
+    min-width: 100vw;
+
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--color-black);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.6rem;
+}
+h3 {
+    font-size: 1.6rem;
+}
+h4 {
+    font-size: 1.2rem;
+}
+h5 {
+    font-size: 0.8rem;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 10rem 0 10rem;
+    min-width: 100vw;
+    overflow-x: hidden;
+}
+
+section h1 {
+    text-align: center;
+    display: block;
+    margin-bottom: 5rem;
+}
+
+img {
+    width: 100%;
+}
+
+.btn {
+    padding: 1.4rem 3.4rem;
+    font-size: 1.1rem;
+    color: black;
+    background: white;
+    display: inline-block;
+    margin: 2rem 0;
+    transition: all 30ms ease;
+    border-radius: 1rem;
+}
+
+.btn:hover {
+    box-shadow: 0 1rem 1rem #8fb3c1;
+}
+
+.btn-primary {
+    background: #009EDB;
+    color: white;
+}
+
+/* ======== NAVBAR ========= */
+
+nav {
+    width: 100%;
+    height: 5rem;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    /* border-bottom: 1px solid #009EDB; */
+}
+
+nav.show-box-shadow {
+    box-shadow: 0 0.6rem 1rem #8fb3c1;
+    border: none;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav button {
+    display: none;
+}
+
+nav h3 {
+    color: #009EDB;
+}
+
+/* nav h3 span {
+    color: #009EDB;
+}  */
+
+
+nav img {
+    margin: 0;
+    padding: 0;
+    /* font-size: 1.2rem; */
+}
+
+nav .container ul {
+    display: flex;
+    height: 100%;
+}
+
+nav .container ul li a {
+    height: 100%;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: relative;
+    transition: all 30ms ease;
+
+}
+
+nav .container ul li a:hover {
+    color: #009EDB;
+}
+
+nav .container ul li a.active {
+    background: #009EDB;
+    color: white;
+}
+
+/* ================ SECTION LANDING ==========  */
+
+section.landing {
+    display: grid;
+    place-items: center;
+    position: relative;
+    top: 5rem;
+    padding-bottom: 14rem;
+
+}
+
+section.landing .container {
+    display: grid;
+    grid-template-columns: 5rem auto 26rem;
+    gap: 2rem;
+}
+
+section.landing .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 5rem;
+}
+
+section.landing .socials a {
+    font-size: 1.1rem;
+    background: var(--color-light);
+    color: var(--color-dark);
+    padding: 0.3rem;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 30ms ease;
+}
+
+section.landing .socials a:hover {
+    background: #009EDB;
+    color: white;
+}
+
+section.landing .info h1 {
+    text-align: left;
+    margin: 0;
+}
+
+section.landing .info span {
+    color: #009EDB;
+}
+
+section.landing .info h3 {
+    margin: 2.4rem 0 1rem;
+}
+
+section.landing .info p {
+    widows: 35rem;
+}
+
+section.landing .profile-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.landing .profile-area .outer-circle {
+    width: 26rem;
+    height: 26rem;
+    border: 1px solid #009EDB;
+    border-radius: 50%;
+    position: relative;
+    animation: move 30s linear infinite;
+}
+
+@keyframes move {
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+
+section.landing .profile-area .outer-circle i {
+    font-size: 1.5rem;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    background: white;
+    color: #009EDB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 0 1rem #8fb3c1; */
+}
+
+section.landing .profile-area .outer-circle i:nth-child(1) {
+    left: calc(50% - 2rem);
+    top: -2rem;
+}
+
+section.landing .profile-area .outer-circle i:nth-child(2) {
+    right: -2rem;
+    top: calc(50% - 2rem);
+}
+
+section.landing .profile-area .outer-circle i:nth-child(3) {
+    left: -2rem;
+    top: calc(50% - 2rem);
+}
+
+section.landing .profile-area .outer-circle i:nth-child(4) {
+    bottom: -2rem;
+    left: calc(50% - 2rem);
+}
+
+section.landing .profile-area .inner-circle {
+    position: absolute;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+
+/* ========================== ABOUT SECTION ========================= */
+
+section.about {
+    background: #ececec;
+}
+
+section.about .container{
+    display: grid;
+    grid-template-columns: 26rem auto;
+    gap: 5rem;
+    /* align-items: center; */
+}
+
+section.about img {
+    border-radius: 1rem;
+}
+
+section.about p {
+    margin-bottom: 1rem;
+}
+
+section.about h4 {
+    color: #009EDB;
+}
+
+section.about .container .read-more-content {
+    display: none;
+}
+
+section.about .container .read-more-content.show-content {
+    display: block;
+}
+
+section.about .container .read-more {
+    display: block;
+    margin: 1rem 0 2rem;
+    color: #009EDB;
+    cursor: pointer;
+}
+
+section.about .container .read-more:hover {
+    text-decoration: underline;
+}
+
+/* ============== SKILL SECTION ============= */
+
+section.skills .container {
+    width: 50%;
+}
+
+section.skills .skill {
+    margin-bottom: 1rem;
+}
+
+section.skills .skill .head {
+    background: #009EDB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+    cursor: pointer; 
+    border-radius: 1rem;  
+}
+
+section.skills .skill .head .left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.skills .skill .head i {
+    font-size: 2rem;
+}
+
+section.skills .skill .items {
+    display: none;
+}
+
+/* for javascript show/hide items   */
+
+section.skills .container .items.show-items {
+    display: block;
+}
+
+/* .container:hover {
+    transform: scale(1.1);
+} */
+
+section.skills .skill .item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    padding: 1.6rem;
+    background: #ececec;
+    margin-bottom: 0.3rem;
+    transition: var(--transition);
+    border-radius: 1rem;
+}
+
+section.skills .skill .item:hover {
+    background: white;
+}
+
+section.skills .skill .progress-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.skills .skill .item .progress-bar {
+    width: 100%;
+    height: 1rem;
+    background: #8fb3c1;
+}
+
+section.skills .skill .item .progress-bar .progress {
+    height: 100%;
+    width: 92%;
+    background: #009EDB;
+}
+
+section.skills .skill .item:nth-child(2) .progress-bar .progress {
+    width: 88%;
+}
+
+section.skills .skill .item:nth-child(3) .progress-bar .progress {
+    width: 72%;
+}
+
+/* =================================================== SECOND ROW STYLE SKILL ITEAM ===================================== */
+
+section.skills .skill .FDprogress-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.skills .skill .item .FDprogress-bar {
+    width: 100%;
+    height: 1rem;
+    background: #8fb3c1;
+}
+
+section.skills .skill .item .FDprogress-bar .FDprogress {
+    height: 100%;
+    width: 90%;
+    background: #009EDB;
+}
+
+section.skills .skill .item:nth-child(2) .FDprogress-bar .FDprogress {
+    width: 85%;
+}
+
+section.skills .skill .item:nth-child(3) .FDprogress-bar .FDprogress {
+    width: 72%;
+}
+
+section.skills .skill .item:nth-child(4) .FDprogress-bar .FDprogress {
+    width: 80%;
+}
+
+section.skills .skill .item:nth-child(5) .FDprogress-bar .FDprogress {
+    width: 65%;
+}
+
+/* =================================================== THIRD ROW STYLE SKILL ITEAM ===================================== */
+
+section.skills .skill .BDprogress-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.skills .skill .item .BDprogress-bar {
+    width: 100%;
+    height: 1rem;
+    background: #8fb3c1;
+}
+
+section.skills .skill .item .BDprogress-bar .BDprogress {
+    height: 100%;
+    width: 80%;
+    background: #009EDB;
+}
+
+section.skills .skill .item:nth-child(2) .BDprogress-bar .BDprogress {
+    width: 90%;
+}
+
+section.skills .skill .item:nth-child(3) .BDprogress-bar .BDprogress {
+    width: 75%;
+}
+section.skills .skill .item:nth-child(4) .BDprogress-bar .BDprogress {
+    width: 65%;
+}
+
+/* ================================== SERVICES ===================================== */
+
+section.services {
+    background: #ececec;
+}
+
+section.services .container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+section.services .container .service {
+    background: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    cursor: default;
+    transition: var(--transition);
+    border-radius: 1rem;
+    
+}
+
+section.services .container .service:hover {
+    transform: scale(1.02);
+}
+
+
+section.services .container .service:hover {
+    box-shadow: 0 2rem 2rem #8fb3c1;
+}
+
+section.services .container .service i {
+    font-size: 2rem;
+    background: #009EDB;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+}
+
+section.services .container .service:nth-child(2) i {
+    background: yellow;
+}
+section.services .container .service:nth-child(3) i {
+    background: red;
+}
+
+section.services .container .service:nth-child(4) i {
+    background: orange;
+}
+/* ======================================== RECENT WORK (PORTFOLIO) =================================== */
+
+/* section.recent-work h1 {
+    text-align: left;
+    margin: 3rem 0 1rem;
+    width: 65%;
+}
+
+section.recent-work .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto)); =====================================================================
+    gap: 3rem;
+}
+
+section.recent-work .projects .project {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section.recent-work .projects .project .action {
+    display: flex;
+    gap: 2rem;
+    
+}
+
+section.recent-work .projects .project .action a {
+    color: #009EDB;
+}
+
+section.recent-work .projects .project .action a:hover {
+    text-decoration: underline;
+} */
+
+/* ================================ new portfolio======================================== */
+
+section.portfolio .container span {
+    color: #009EDB;
+}
+
+section.portfolio .container h4 {
+    text-align: center;
+}
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.row img {
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.1), black);
+    position: absolute;
+    border-radius: 5px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+    flex-direction: column;
+}
+
+.layer h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+    align-items: center;
+}
+
+.layer p {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.8;
+    align-items: center;
+}
+
+.layer i {
+    color: black;
+    margin-top: 20px;
+    font-size: 20px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.row:hover img{
+    transform: scale(1.1);
+}
+
+.row:hover .layer {
+    height: 100%;
+}
+
+/* ====================== TESIMONIAL SECTION ================================ */
+
+/* section.testimonials {
+    background: #ececec;
+}
+
+section.testimonials .container {
+    width: 44rem;
+}
+
+section.testimonials .carousel {
+    display: flex;
+    align-items: center;
+
+}
+
+section.testimonials .testimonial {
+    background: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+
+}
+
+section.testimonials .testimonial .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section.testimonials .testimonial .head .profile-area {
+    display: flex;
+    gap: 1rem;
+}
+
+section.testimonials .testimonial .head .profile-area .avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+section.testimonials .testimonial .head .stars {
+    color: #009EDB;
+}
+
+section.testimonials .testimonial .head .stars i {
+    font-size: 1.2rem;
+} */
+
+
+/* =================================== contact ================================= */
+
+section.contact {
+    /* background: url("./images/feed-6.jpg") no-repeat center center/cover; */
+    background: #ececec;
+    /* padding: 10rem; */
+    max-width: 100vw;
+}
+
+/* section.contact .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10rem 0 7rem;
+} */
+
+section.contact .container {
+    width: 40%;
+}
+
+section.contact .container h1 {
+    margin: 0;
+    padding-bottom: 3rem;
+    color: black;
+}
+
+/* section.contact .container h4 {
+    text-align: center;
+} */
+
+section.contact .container p {
+    text-align: center;
+    color: black;
+    /* opacity: ; */
+    margin-top: 0.5rem;
+}
+
+section.contact .container span {
+    color: #009EDB;
+}
+
+section.contact form {
+    align-items: center;
+    margin-top: 3rem;
+    
+}
+
+section.contact form input, section.contact form textarea {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1.6rem;
+    background: #8fb3c1;
+    color: black;
+    transition: var(--transition);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 1rem;
+
+}
+
+section.contact form textarea {
+    height: 10rem;
+}
+
+section.contact form input:focus, section.contact form textarea:focus {
+    background: #009EDB;
+    color: white;
+}
+
+section.contact form input::placeholder, section.contact form textarea::placeholder {
+    color: black;
+}
+
+section.contact form .btn {
+    width: 14rem;
+    border: none;
+    background: #009EDB;
+    color: white;
+    margin: 2rem auto 0;
+}
+
+section.contact form .btn:hover {
+    background: #009EDB;
+    cursor: pointer;
+    color: black;
+}
+
+/* ================================= new contact =============================== */
+
+/* .contact {
+    background: #ececec;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.contact-text h4 {
+    color: #009EDB;
+    margin: 18px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text h1 {
+    text-align: center;
+}
+
+.contact-text p {
+    color: black;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.list {
+    margin-bottom: 2.8rem;
+}
+
+.list li {
+    margin-bottom: 12px;
+} */
+
+/* ================================= footer =============================== */
+
+footer{
+    padding-top: 2rem;
+    background: white;
+}
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+footer .container h3 {
+    color: #009EDB;
+}
+
+footer .container ul {
+    display: flex;
+    gap: 3rem;
+}
+
+footer .container ul a {
+    color: gray;
+    transition: var(--transition);
+}
+
+footer .container ul a:hover {
+    color: #009EDB;
+}
+
+footer .container .socials {
+    display: flex;
+    gap: 2rem;
+}
+
+footer .container .socials a {
+        font-size: 1.1rem;
+        background: var(--color-light);
+        color: var(--color-dark);
+        padding: 0.3rem;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 30ms ease;
+}
+
+footer .container .socials a:hover {
+    background: #009EDB;
+    color: white;
+}
+
+footer .copyright {
+    background: #009EDB;
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+/* ============================================ MEDIA QUERIES (PHONES) ====================================== */
+
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+    h3{
+        font-size: 1.2;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    h5{
+        font-size: 0.68rem;
+    }
+
+    .container{
+        width: 75%;
+    }
+
+
+
+/* ============================= NAV BAR ========================= */
+
+    nav {
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    nav h3 {
+        margin-left: 1rem;
+    }
+    
+    nav .container{
+        width: 100%;
+    }
+
+    nav .container ul {
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        z-index: 3;
+        width: 16rem;
+        height: 100vh;
+        background: white;
+        box-shadow: 1rem 0 2rem #8fb3c1;
+        display: none;
+    }
+    nav ul li {
+        height: 4.6rem;
+        width: 100%;
+    }
+    
+    nav .container ul li a{
+        width: 100%;
+        justify-content: start;
+        padding-left: 2rem;
+    }
+
+    nav .container ul li a:hover {
+        padding-left: 3rem;
+    }
+
+    nav button {
+        display: inline-block;
+        cursor: pointer;
+        background: transparent;
+        color: black;
+        margin-right: 1rem;
+    }
+
+    nav button#close-btn {
+        display: none;
+    }
+
+    /* ========================= LANDING SECTION ===================================== */
+
+
+    section.landing {
+        margin-top: -4rem;
+        padding-bottom: 7rem;
+        max-width: 100vw;
+        overflow-x: hidden;
+
+    }
+
+    section.landing .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 50%;
+        text-align: center;
+        row-gap: 6rem;
+    }
+
+    
+    section.landing .container .socials {
+        display: none;
+    }
+    
+    section.landing .container .info {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    section.landing .container .info h1 {
+        text-align: center;
+    }
+
+    section.landing .container .info p {
+        margin: 0 auto;
+        width: 92%;
+        /* text-align: center; */
+    }
+
+    section.landing .container .profile-area {
+        grid-row: 1;
+        width: 94%;
+        margin: 0 auto;
+    }
+
+    section.landing .container .outer-circle {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    section.landing .container .inner-circle {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    section.landing .container .outer-circle i {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    section.landing .profile-area .outer-circle i:nth-child(1) {
+        left: calc(50% - 1.5rem);
+        top: -1.5rem;
+    }
+    
+    section.landing .profile-area .outer-circle i:nth-child(2) {
+        right: -1.5rem;
+        top: calc(50% -1.5rem);
+    }
+    
+    section.landing .profile-area .outer-circle i:nth-child(3) {
+        left: -1.5rem;
+        top: calc(50% - 1.5rem);
+    }
+    
+    section.landing .profile-area .outer-circle i:nth-child(4) {
+        bottom: -1.5rem;
+        left: calc(50% - 1.5rem);
+    }
+
+    /* =========================== ABOUT SECTION ======================================= */
+
+    section.about .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+        width: 75%;
+    }
+
+    /* =========================== SKILLS SECTION ======================================= */
+
+    section.skills .container {
+        width: 85%;
+    }
+
+    /* =========================== SERVICE SECTION ======================================= */
+
+    section.services .container {
+        grid-template-columns: 1fr;
+    }
+
+    /* =========================== PORTFOLIO SECTION ======================================= */
+
+    section.portfolio .portfolio-content {
+        grid-template-columns: 1fr;
+    }
+
+    section.portfolio .container h1 {
+        width: 94vw;
+        margin: 1.4rem 0 1rem;
+        text-align: center;
+    }
+
+    /* ========================== TESTIMONIAL SECTION ===================================== */
+
+    /* section.testimonials .container {
+        grid-template-columns: 1fr;
+        width: 94vw;
+    }
+
+    section.testimonials .container .testimonial .head .stars i {
+        font-size: 0.8rem;
+    } */
+
+    /* ====================== CONTACT SECTION ======================== */
+
+    section.contact .container {
+        width: 60vw;
+    }
+
+    /* section.contact .container {
+        width: 94vw;
+    }
+
+    section.contact .container P {
+        width: 80vw;
+        margin: 0.5rem auto 0;
+    } */
+
+    /* ================================== FOOTER SECTION ================================= */
+
+    footer .container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    footer .container ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.4rem;
+    }
+    
+
+
+
+}
+
+
+
+
